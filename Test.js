@@ -1,5 +1,13 @@
 var Person=require('./MyModule');
 let  xiaoming=new Person('xiaoming',16);
 xiaoming.hello();
-console.log(1,2,3);
-console.trace();
+let count=1;
+let countMount=()=>{
+    count=count+1;
+    console.log(count);
+    if(count<100){
+        process.nextTick(countMount);
+    }
+}
+countMount();
+process.nextTick(()=>{console.log('end');})
