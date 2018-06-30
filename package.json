@@ -15,5 +15,8 @@
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "superagent": "^3.8.3"
+  },
+  "devDependencies": {
+    "mongodb": "^3.1.0"
   }
 }
