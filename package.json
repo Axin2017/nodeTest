@@ -4,17 +4,28 @@
   "description": "just for test",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "publish-zhongshan": "node index E:/jsproject/chinadci/zhongshan-zrzy/front-git/onemap/dist E:/jsproject/chinadci/tanxin-test zhongshan",
+    "publish-test": "node index E:/jsproject/chinadci/tanxin-test1 E:/jsproject/chinadci/tanxin-test test"
   },
   "author": "Axin",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/parser": "^7.5.0",
+    "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.3",
+    "inquirer": "^7.0.5",
     "koa": "^2.5.1",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
+    "koa-session": "^5.12.2",
+    "node-cmd": "^3.0.0",
     "nunjucks": "^3.1.3",
+    "ora": "^4.0.3",
+    "recast": "^0.18.1",
+    "request": "^2.88.2",
     "superagent": "^3.8.3"
   },
   "devDependencies": {
