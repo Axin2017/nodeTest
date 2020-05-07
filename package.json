@@ -6,7 +6,8 @@
   "scripts": {
     "test": "test",
     "publish-zhongshan": "node index E:/jsproject/chinadci/zhongshan-zrzy/front-git/onemap/dist E:/jsproject/chinadci/tanxin-test zhongshan",
-    "publish-test": "node index E:/jsproject/chinadci/tanxin-test1 E:/jsproject/chinadci/tanxin-test test"
+    "publish-test": "node index E:/jsproject/chinadci/tanxin-test1 E:/jsproject/chinadci/tanxin-test test",
+    "tt": "svn-committer commit"
   },
   "author": "Axin",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "@babel/parser": "^7.5.0",
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.2",
+    "commander": "^5.0.0",
     "express": "^4.16.3",
     "inquirer": "^7.0.5",
     "koa": "^2.5.1",
