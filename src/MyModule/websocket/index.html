@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="renderer" content="webkit" />
+    <title>test</title>
+    <script src="./lib/echarts.min.js"></script>
+    <script src="./lib/jquery.min.js"></script>
+    <style>
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <input type="text" id="msg" />
+    </div>
+
+    <script>
+      var ws = new WebSocket('ws://localhost:8080')
+
+      ws.onopen = function () {
+        // Web Socket 已连接上，使用 send() 方法发送数据
+        console.log('连接上了')
+        var msgInput = document.getElementById('msg')
+        msgInput.addEventListener('change',function() {
+          ws.send(this.value)
+        })
+      }
+
+      ws.onmessage = function (evt) {
+        var received_msg = evt.data
+        console.log('接收到'+received_msg)
+      }
+
+      ws.onclose = function () {
+        // 关闭 websocket
+        alert('连接已关闭...')
+      }
+    </script>
+  </body>
+</html>

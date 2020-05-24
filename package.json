@@ -7,7 +7,7 @@
     "test": "test",
     "publish-zhongshan": "node index E:/jsproject/chinadci/zhongshan-zrzy/front-git/onemap/dist E:/jsproject/chinadci/tanxin-test zhongshan",
     "publish-test": "node index E:/jsproject/chinadci/tanxin-test1 E:/jsproject/chinadci/tanxin-test test",
-    "tt": "svn-committer commit"
+    "index": "cls && node index.js"
   },
   "author": "Axin",
   "license": "ISC",
