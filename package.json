@@ -7,7 +7,7 @@
     "test": "test",
     "publish-zhongshan": "node index E:/jsproject/chinadci/zhongshan-zrzy/front-git/onemap/dist E:/jsproject/chinadci/tanxin-test zhongshan",
     "publish-test": "node index E:/jsproject/chinadci/tanxin-test1 E:/jsproject/chinadci/tanxin-test test",
-    "tt": "svn-committer commit"
+    "index": "cls && node index.js"
   },
   "author": "Axin",
   "license": "ISC",
@@ -28,7 +28,8 @@
     "ora": "^4.0.3",
     "recast": "^0.18.1",
     "request": "^2.88.2",
-    "superagent": "^3.8.3"
+    "superagent": "^3.8.3",
+    "ws": "^7.2.5"
   },
   "devDependencies": {
     "mongodb": "^3.1.0"

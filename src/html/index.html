@@ -22,6 +22,36 @@
   <div class="red-border px100">
     this is my first node html.
   </div>
+  <script>
+    function myNew(Func, ...args) {
+      const F = function() {
+        Func.apply(this, args)
+      }
+      F.prototype = Object.create(Func.prototype)
+      F.prototype.constructor = Func
+      return new F()
+    }
+    function myNew1(Func, ...args) {
+      const obj = Object.create(Func.prototype)
+      Func.apply(obj,args)
+      return obj
+    }
+    function Person(name) {
+      this.name = name
+    }
+    Person.prototype.sayName = function () {
+      console.log(this.name)
+    }
+    var o = myNew1(Person, 'tanxin')
+    o.sayName()
+    console.log(o)
+    var o1 = new Person('manzhi')
+    o1.sayName()
+    console.log(o1)
+    var o2 = myNew(Person,'heimei')
+    o2.sayName()
+    console.log(o2)
+  </script>
 </body>
 
 </html>
